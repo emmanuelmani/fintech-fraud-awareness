@@ -1,0 +1,39 @@
+# How Device Intelligence Works in Fraud Prevention
+
+Device intelligence is one of the most effective tools in modern fraud prevention. It works by analysing signals from the device a user is connecting from to determine whether the connection is likely to be legitimate or fraudulent — before any transaction happens.
+
+This is relevant for IT teams at fraud prevention companies because the integrity of the device data they collect depends partly on how employee devices are managed. It also helps IT support people understand what the product they are supporting actually does.
+
+---
+
+## What device intelligence collects
+
+When a user connects to a financial service, device intelligence systems collect signals across several categories:
+
+**Hardware fingerprinting** — Characteristics of the device itself: screen resolution, processor type, installed fonts, browser plugins, graphics card capabilities. These form a fingerprint that is relatively stable over time and hard to fake convincingly.
+
+**Behavioural biometrics** — How the user interacts with the device: typing speed and rhythm, mouse movement patterns, how they hold a phone (gyroscope data on mobile), how they scroll. Legitimate users have consistent behavioural patterns. Fraudsters using automated tools or unfamiliar stolen accounts behave differently.
+
+**Network signals** — IP address, whether the connection is coming through a VPN or Tor, the geographic location implied by the IP versus the stated location of the user, whether the IP has been associated with previous fraud.
+
+**Software environment** — Operating system version, browser version, whether the device has been rooted or jailbroken, whether it is running in a virtual machine (common in fraud operations), whether developer mode is enabled.
+
+---
+
+## How it detects fraud
+
+Device intelligence does not make binary decisions — it generates risk scores. A connection from a known device, from a consistent location, with normal behavioural patterns, scores low risk. A connection from a new device, routed through a VPN, with automated typing patterns, from a country inconsistent with the user's history, scores high risk.
+
+The fraud platform then decides what to do based on that score: allow the transaction, require additional verification (OTP, biometric), or block the transaction and flag the account for review.
+
+**Why this is hard to defeat**: Fraudsters can change IP addresses easily. Changing a device fingerprint convincingly is much harder. Mimicking someone's specific typing patterns and mouse movements accurately is currently beyond practical fraud tooling. Combining multiple signals makes the system robust against any single evasion technique.
+
+---
+
+## The IT operations connection
+
+**Employee devices affect signal quality.** If IT teams at a FinTech company allow employees to connect through personal VPNs, use non-standard browsers, or run browsers with aggressive fingerprint-blocking extensions, those employees may trigger fraud alerts on internal systems. IT policy should account for this.
+
+**MDM and device integrity matter.** Fraud prevention systems flag rooted phones and jailbroken devices as high risk. If employee mobile devices are enrolled in MDM and have appropriate compliance policies, they present clean device signals.
+
+**Endpoint security supports fraud detection.** Compromised employee devices — infected with malware or keyloggers — can be used to commit fraud from within the organisation's own network. Endpoint security is therefore not just an IT hygiene issue but part of the fraud prevention perimeter.
